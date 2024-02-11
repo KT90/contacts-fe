@@ -1,0 +1,17 @@
+<form [formGroup]="contactForm" (ngSubmit)="addContact()">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Code name</mat-label>
+    <input matInput formControlName="codeName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Phone number</mat-label>
+    <input matInput formControlName="phoneNumber">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">
+    Add contact
+  </button>
+</form>
